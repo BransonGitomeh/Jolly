@@ -6,7 +6,6 @@ module.exports = function(QueryToken,db,replyCB){
 
         switch (QueryToken.QueryTarget){
           case "user":
-
             userTypeResolver(QueryToken,db,function(resolvedUser){
               replyCB(resolvedUser)
             });
@@ -14,7 +13,6 @@ module.exports = function(QueryToken,db,replyCB){
            break;
 
            case "church":
-
              churchTypeResolver(QueryToken,db,function(resolvedUser){
                replyCB(resolvedUser)
              });
