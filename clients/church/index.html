@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>The Gathering Churh International</title>
+
+    <!-- CSS  -->
+    <link href="build/assets/js/materialize/dist/css/materialize.min.css" rel="stylesheet">
+    <link href="build/assets/css/styles.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="build/assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="build/assets/js/materialize/dist/js/materialize.min.js"></script>
+
+    </script>
+    <!-- View Engine -->
+    <script src="build/assets/js/mithril/mithril.min.js"></script>
+
+
+    <link rel="stylesheet" href="build/assets/Ideal-Image-Slider-1.5.0/example/css/normalize.css">
+    <link rel="stylesheet" href="build/assets/Ideal-Image-Slider-1.5.0/ideal-image-slider.css">
+    <link rel="stylesheet" href="build/assets/Ideal-Image-Slider-1.5.0/themes/default/default.css">
+</head>
+<body id="top" class="scrollspy">
+        <script>
+            // make a js file config that will be unique per the church as per the configuration since they will be having the same thing
+
+            var config = {
+                "settings":{
+                    color:"blue darken-3",
+                    primaryColor:"orange",
+                    installationYear:"2015",
+                    currentYear:new Date().getFullYear()
+                },
+
+                "profile":{
+                    churchName:"The Gathering Church Kenya",
+                    slogans:[
+                        "Making Full Disciples of Jesus Christ",
+                        "Spreading the gospel"
+                    ],
+                    address:"PO. box 23333",
+                    phoneNumber:"0724736012",
+                    telephoneNumber:"020 133671212",
+                    email:"sirbranson67@gmail.com"
+                }
+            }
+        </script>
+
+        <script>
+            var color = config.settings.color
+            var primaryColor = config.settings.primaryColor
+        </script>
+        <!-- make this build file fetch from an external cdn controlled by me, and thus one update updates all the files -->
+        <script src="build/assets/Ideal-Image-Slider-1.5.0/ideal-image-slider.js"></script>
+        <script src="build/churchia.js"></script>
+    </body>
+</html>
