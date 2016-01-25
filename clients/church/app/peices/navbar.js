@@ -38,8 +38,10 @@ module.exports = {
                                   id:"aboutUs"
                                 },[
 
-                                  m(navItem,{ name:"Church Members Portal"}),
-                                  m(navItem,{ name:"Pastorial Portal"})
+                                  m(navItem,{ name:"Gospel"}),
+                                  m(navItem,{ name:"History"}),
+                                  m(navItem,{ name:"Leadership"}),
+                                  m(navItem,{ name:"What we teach"})
                                 ]),
 
                                 m("ul",{ //dropdown list

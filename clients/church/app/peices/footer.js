@@ -40,7 +40,7 @@ module.exports={
 
                 m(".footer-copyright container",[
                         "Copyright © " + config.settings.installationYear + "-" + config.settings.currentYear + ", All rights reserved." + config.profile.churchName,[
-                            m("span",{class:"right"}," SSC: 0.0.2")
+                            m("span",{class:"right"}," <SSC: 0.0.3/>")
                         ]
                 ])
             ])
