@@ -1,7 +1,7 @@
 module.exports={
         view:function(){
             return m("footer",{class:"page-footer " + primaryColor},[
-                m(".containerx",[
+                m(".container",[
                     m(".row center",[
 
                         m(".col l5 s12 white-text",[
@@ -40,7 +40,7 @@ module.exports={
 
                 m(".footer-copyright container",[
                         "Copyright © " + config.settings.installationYear + "-" + config.settings.currentYear + ", All rights reserved." + config.profile.churchName,[
-                            m("span",{class:"right"}," < app version: 0.0.1 />")
+                            m("span",{class:"right"}," SSC: 0.0.2")
                         ]
                 ])
             ])

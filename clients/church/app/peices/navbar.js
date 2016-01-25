@@ -24,14 +24,23 @@ module.exports = {
                                  });
                               },
                             },[
-                                m(navItem,{ name:"Login",direction:"right",url:"/contactus",dropId:"portals" }),
+                                m(navItem,{ name:"Login",direction:"right",url:"/loginSelect",dropId:"portals" }),
                                 m(navItem,{ name:"Contact Us",direction:"right",url:"/contactus" }),
                                 m(navItem,{ name:"Online Church",direction:"right",url:"/onlineChurch",dropId:"onlineChurch"}),
 
                                 m(navItem,{ name:"Home", direction:"left",url:"/" }),
-                                m(navItem,{ name:"About Us",direction:"left",url:'/AboutUs' }),
+                                m(navItem,{ name:"About Us",direction:"left",url:'/AboutUs',dropId:"aboutUs" }),
                                 m(navItem,{ name:"Ministries",direction:"left",url:"/ministries", dropId:"ministries" }),
 
+
+                                m("ul",{ //dropdown list
+                                  class:"dropdown-content",
+                                  id:"aboutUs"
+                                },[
+
+                                  m(navItem,{ name:"Church Members Portal"}),
+                                  m(navItem,{ name:"Pastorial Portal"})
+                                ]),
 
                                 m("ul",{ //dropdown list
                                   class:"dropdown-content",

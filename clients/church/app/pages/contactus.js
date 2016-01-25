@@ -1,6 +1,6 @@
 var footer = require("../peices/footer")
 var topbar = require("../peices/topbar")
-var contactForm = require("../peices/contactForm")
+var contactForm = require("../../../shared_components/contactForm")
 
 
 module.exports = {
@@ -8,18 +8,23 @@ module.exports = {
             return [
                 m(topbar),
                 // m(hero),
-                m(".row center card-panel",[
+                m(".row",[
                   // m("h1","about us")
-                  m(".col s12 l5",[
-                    m("div","good welcoming picture to show we will respond")
+                  // m(".col s12 l5",[
+                  //   // m("div","good welcoming picture to show we will respond")
+                  //    m("img",{
+                  //       class:"materialboxed",
+                  //       "data-caption":"Our Sanctuary",
+                  //       src:"/build/assets/img/icons/contactus.jpg",
+                  //       config:function(){
+                  //         $('.materialboxed').materialbox();
+                  //       }
+                  //     }),
 
-                  ]),
+                  // ]),
 
-                  m(".col s12 l7",[
-                    m(".card-panel",[
-                      m("h5","Leave us a message"),
-                      m(contactForm)
-                    ])
+                  m(".col s12 l12",[
+                   m(contactForm)
                   ])
                 ]),
                 // custom component with unique content per page

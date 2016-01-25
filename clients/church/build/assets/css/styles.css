@@ -19,7 +19,7 @@ body {
 }
 #main,
 footer {
-  padding-left: 240px;
+  padding-left: 0px;
 }
 
 #input-select .input-field label {
