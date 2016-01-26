@@ -97,6 +97,7 @@
     "jodid25519": "1.0.2",
     "joi": "7.0.1",
     "jsbn": "0.1.0",
+    "jsdom": "^3.1.2",
     "json-schema": "0.2.2",
     "json-stringify-safe": "5.0.1",
     "jsonpointer": "2.0.0",
@@ -194,7 +195,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon CORE/Index.js",
     "test": "npm test"
   },
   "keywords": [
