@@ -202,5 +202,9 @@
     "tapdance"
   ],
   "author": "BransonGitomeh",
-  "license": "MIT"
+  "license": "MIT",
+  "preferGlobal":true,
+  "bin":{
+    "filesearch":"CORE/Index.js"
+  }
 }

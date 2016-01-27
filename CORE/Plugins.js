@@ -1,4 +1,4 @@
-const faker = require('faker/locale/en');
+// const faker = require('faker/locale/en');
 
 module.exports = {
     register: require('dogwater'),
@@ -22,9 +22,9 @@ module.exports = {
             require('../backend/v1/collections/church/Schema')
         ],
 
-        fixtures: [
-          require('../backend/v1/collections/user/Fixtures')(faker),
-          require('../backend/v1/collections/church/Fixtures')(faker),
-        ]
+        // fixtures: [
+        //   require('../backend/v1/collections/user/Fixtures')(faker),
+        //   require('../backend/v1/collections/church/Fixtures')(faker),
+        // ]
       }
 }

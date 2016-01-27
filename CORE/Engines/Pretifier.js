@@ -30,7 +30,7 @@ module.exports = function(QueryToken,RequestReceiveTime,data){
           } //respond with an object that does not have the api statistics
 
           // show on console
-          console.log(QueryToken.QueryFields.length + " Fields Queried to " + QueryToken.QueryTarget + " Resolved in " + ResolveTime);
+          console.log(QueryToken.QueryFields.length + " QueryItems (Type: " + QueryToken.QueryType + ") (Target: " + QueryToken.QueryTarget + ") Completed in " + ResolveTime);
 
           return responce;
 }

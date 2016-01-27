@@ -31,11 +31,8 @@ module.exports = function(QueryToken,db,replyCB){
 
                 var mutationsDir = "./backend/v1/collections/" + QueryToken.QueryTarget + "/Mutations/";
 
-                console.log(mutationsDir)
-
                 fs.readdir(mutationsDir,function(err,mutations){
                   if(err) console.log(err)
-                  console.log(mutations)
                   if(mutations){
 
                      for(var i = 0; i < mutations.length; i ++){ // look for a mutation that matches the one in the query, 
@@ -48,6 +45,7 @@ module.exports = function(QueryToken,db,replyCB){
                           // run the constructed module to get to runthe mutation
                           MutationModule(QueryToken,db,function(resolvedUser){
                             // run the callback to return the mutations responce
+                            console.log("Mutation--Resolved")
                             replyCB(resolvedUser)
                           });
                           // break the loop since hte intended module has been found

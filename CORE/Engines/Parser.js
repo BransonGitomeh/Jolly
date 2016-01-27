@@ -3,7 +3,6 @@
 
 module.exports = {
   parse:function(QueryString){
-    console.log("parsing")
     return root(tokenize(QueryString))
   }
 }
@@ -46,6 +45,7 @@ function root(tokens) {
 
     queryMeta.QueryFields = fields(tokens, {index:2})
 
+    console.log("Parsing--Complete")
     return queryMeta;
 }
 

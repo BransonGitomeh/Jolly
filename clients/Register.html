@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+<h1>registaration awesomeness</h1>
+<script src="mithril.min.js"></script>
+
+<script>
+		var QueryConstructor = {
+				makeQuery:function(collectionName,schema,MutationType){
+					var QueryHead = collectionName + '[' + MutationType +']{'
+					var QueryTail = `}`
+
+					var QueryBody = " "
+					for(item in schema){
+						var QueryItem = item + ":" + schema[item]()
+						QueryBody = QueryBody + QueryItem + " "
+					}
+
+					var Query = QueryHead + QueryBody + QueryTail	
+					console.log(Query)
+					return Query;
+				},
+
+				sendQuery:function(collection,MutationType,callback){
+					console.log(collection)
+					reQuestConfig = {
+						method:"POST",
+						url:collection.url + QueryConstructor.makeQuery(collection.name,collection.schema,MutationType),
+					}
+
+					var ajaxGun = m.request(reQuestConfig);
+
+					ajaxGun.then(function(res){
+						callback(res)
+					})
+				}		
+		}
+
+	var registration = {
+		controller:function(){
+			return {
+				user:{
+					url:"http://localhost:4200/v1/",
+					name:"user",
+					schema:{
+						name:m.prop(""),
+						age:m.prop(""),
+						lover:m.prop(""),
+					},
+					mutate:function(MutationType){
+						 QueryConstructor.sendQuery(this,MutationType,function(res){
+							console.log(res)
+						 })
+					}
+				}
+			}
+		    			
+		},
+
+
+		view:function(ctrl){
+			return m(".app",[
+				m("form",{
+					onsubmit:function(event){
+						ctrl.user.mutate("register"),
+						event.preventDefault()
+					}
+				},[
+					m("label","name"),
+					m.component(formInput,{value:ctrl.user.schema.name}),
+
+					m("label","age"),
+					m.component(formInput,{value:ctrl.user.schema.age}),
+
+					m("label","lover"),
+					m.component(formInput,{value:ctrl.user.schema.lover}),
+
+					m("button",{type:"submit"},"my awesome")
+				])
+			])
+		}
+	}
+
+	var formInput = {
+		view:function(ctrl,args){
+			return m("input",{
+				oninput:m.withAttr("value",args.value)
+			})
+		}
+	};
+		
+	m.mount(document.body,registration)
+</script>
+
+</body>
+</html>
