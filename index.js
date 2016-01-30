@@ -2,7 +2,7 @@
 
 const Hapi = require('hapi');
 const config = require('./config/app');
-const Resolver = require('./CORE/Engines/Resolver')
+const Resolver = require('./.CORE/Engines/Resolver')
 
 
 // configuration--------------------------------------------
@@ -25,7 +25,7 @@ Resolver(function(results){
     });
 
     // console.log(require("./CORE/Plugins")(results.result.schemas))
-    GRID.register(require("./CORE/Plugins/index")(results.result.schemas),function(err){
+    GRID.register(require("./.CORE/Plugins/index")(results.result.schemas),function(err){
         if(err){throw err}
 
         GRID.start((err) => {

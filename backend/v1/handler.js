@@ -1,8 +1,8 @@
-const QueryResolver = require("../../CORE/Engines/QueryResolver");
-const QLparser = require('../../CORE/Engines/Parser');
-const Pretifier = require('../../CORE/Engines/Pretifier')
+const QueryResolver = require("../../.CORE/Engines/QueryResolver");
+const QLparser = require('../../.CORE/Engines/Parser');
+const Pretifier = require('../../.CORE/Engines/Pretifier')
 const Config = require('../../config/app');
-const testQ = require('../../Tests/queries');
+const testQ = require('../../.Tests/queries');
 
 
 module.exports = {
