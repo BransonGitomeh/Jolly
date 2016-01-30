@@ -1,9 +1,9 @@
 module.exports = {
   identity: 'user',
 
-  connection: 'simple',
+  connection: 'mysql',
 
-  migrate: "safe",
+  migrate: "alter",
 
   attributes: {
       name: 'string'

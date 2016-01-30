@@ -7,16 +7,17 @@
     "dogwater": "^1.1.0",
     "faker": "^3.0.1",
     "hapi": "^12.1.0",
-    "sails-memory": "^0.10.5"
+    "sails-memory": "^0.10.5",
+    "sails-mysql": "^0.11.3"
   },
   "devDependencies": {},
   "engines": {
     "node": "5.5.0"
   },
-  "scripts":{
-    "start":"node index.js",
-    "dev":"nodemon index.js"
-   },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "keywords": [
     "tapdance",
     "hapi",

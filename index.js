@@ -1,7 +1,7 @@
 'use strict';
 
 const Hapi = require('hapi');
-const Config = require('./CORE/Config');
+const config = require('./config/app');
 const Resolver = require('./CORE/Engines/Resolver')
 
 
@@ -9,7 +9,7 @@ const Resolver = require('./CORE/Engines/Resolver')
 const GRID = new Hapi.Server()
 
 var connectionConfig = {
-    port:process.env.PORT || 4200,
+    port:process.env.PORT || config.port,
     routes:{cors:false}
 }
 if(!process.env.PORT){
@@ -25,7 +25,7 @@ Resolver(function(results){
     });
 
     // console.log(require("./CORE/Plugins")(results.result.schemas))
-    GRID.register(require("./CORE/Plugins")(results.result.schemas),function(err){
+    GRID.register(require("./CORE/Plugins/index")(results.result.schemas),function(err){
         if(err){throw err}
 
         GRID.start((err) => {

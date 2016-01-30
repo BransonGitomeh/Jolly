@@ -4,18 +4,8 @@ module.exports = function(stuff){
     var plugin = {
         register: require('dogwater'),
         options: {
-            adapters: {
-                memory: require('sails-memory'),
-                // mongo: require('sails-mongo')
-            },
-            connections: {
-                simple: { adapter: 'memory' }
-                // mongodb:{
-                //   adapter: 'mongo',
-                //   host: 'localhost', // defaults to `localhost` if omitted
-                //   port: 27017, // defaults to 27017 if omitted
-                // }
-            },
+            adapters: require("../../config/adapters"),
+            connections: require("../../config/connections"),
 
             models: [],
             fixtures: []

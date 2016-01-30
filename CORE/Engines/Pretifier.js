@@ -1,4 +1,4 @@
-const Config = require('../../CORE/Config');
+const Config = require('../../config/app');
 
 
 module.exports = function(QueryToken,RequestReceiveTime,data){
