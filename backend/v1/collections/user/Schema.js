@@ -1,18 +1,11 @@
 module.exports = {
   identity: 'user',
 
-  connection: 'mongodb',
+  connection: 'simple',
+
+  migrate: "safe",
 
   attributes: {
-    name: 'string',
-
-    church:{
-      model:"church"
-    },
-
-    pastor:{
-      model:"church"
-    }
-
+      name: 'string'
    }
 }

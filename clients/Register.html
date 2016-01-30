@@ -26,9 +26,11 @@
 
 				sendQuery:function(collection,MutationType,callback){
 					console.log(collection)
+					var publicAPI = function(xhr) {xhr.withCredentials = false;}
 					reQuestConfig = {
-						method:"POST",
+						method:"GET",
 						url:collection.url + QueryConstructor.makeQuery(collection.name,collection.schema,MutationType),
+						config:publicAPI
 					}
 
 					var ajaxGun = m.request(reQuestConfig);
@@ -40,10 +42,13 @@
 		}
 
 	var registration = {
+
 		controller:function(){
+			var localUrl = "http://localhost:4200/v1/";
+			var herokuUrl = "http://immense-anchorage-30877.herokuapp.com/v1/";
 			return {
 				user:{
-					url:"http://localhost:4200/v1/",
+					url:herokuUrl,
 					name:"user",
 					schema:{
 						name:m.prop(""),

@@ -7,7 +7,7 @@ const GRID = new Hapi.Server()
 
 GRID.connection({
     host:"localhost",
-    port: Config.port,
+    port:(process.env.PORT || Config.port),
     routes:{
         cors:true
     }

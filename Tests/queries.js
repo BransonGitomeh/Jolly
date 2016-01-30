@@ -14,7 +14,7 @@ module.exports = {
                                                                          name
                                                                        }`
 
-         ,multipleObjectQuery : `user(range:2-500) {
+         ,multipleObjectQuery : `user(range:0-9) {
                                     _id
                                     email
                                     name
