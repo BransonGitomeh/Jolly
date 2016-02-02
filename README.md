@@ -2,11 +2,12 @@
 An ambitious framework for building modern applications
 
 ##Usage
-clone repo
-npm install
-npm install nodemon
+1. clone repo
+* npm install
+* npm install nodemon
+* run `nodemon index.js`
 
-visit localhost:4200/v1
+visit `localhost:4200/v1`
 
 ##Goals
 * easily connect to databases with waterlines adapters
